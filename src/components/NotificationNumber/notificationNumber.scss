@@ -4,11 +4,17 @@
   width: 58px;
   height: 37px;
   font-weight: bold;
-  color: white;
-  background-color: #443DFF;
+  color: #443DFF;
+  background-color: #E7E7FF;
   border-radius: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
+}
+
+.number:hover {
+  color: #E7E7FF;
+  background-color: #443DFF;
+  border: 2px solid #443DFF;
 }
