@@ -67,7 +67,6 @@ const Leftbar = () => {
     <div className='leftbar'>
       <div className="container">
         <div className="menu">
-
           {Items.map(item => {
             return(
               <MenuItem

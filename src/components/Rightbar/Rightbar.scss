@@ -1,5 +1,14 @@
 .rightbar {
-  display: flex;
   flex: 3;
-  width: 330px;
+  display: flex;
+  flex-direction: row;
+  width: 320px;
+  margin-right: 25px;
+  height: calc(100vh - 125px);
+  position: sticky;
+  top: 125px;
+  .container {
+    width: 100%;
+  }
+
 }

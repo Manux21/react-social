@@ -74,7 +74,7 @@ function App() {
   ])
 
   return (
-    <div>
+    <div className='bg'>
       <RouterProvider router={router}/>
     </div>
   );
