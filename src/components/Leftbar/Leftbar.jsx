@@ -77,13 +77,6 @@ const Leftbar = () => {
               />
             )
           })}
-          {/*<MenuItem title={'Profile'}/>*/}
-          {/*<MenuItem title={'Messages'} number={10} icon={Profile()}/>*/}
-          {/*<MenuItem title={'News'}/>*/}
-          {/*<MenuItem title={'Friends'} number={1}/>*/}
-          {/*<MenuItem title={'Music'}/>*/}
-          {/*<MenuItem title={'Images'}/>*/}
-
         </div>
       </div>
     </div>

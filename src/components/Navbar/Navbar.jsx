@@ -13,7 +13,7 @@ const Navbar = () => {
     <div className='navbar'>
       <div className="left">
         <Link to='/'>
-          <img src={Logo} alt=""/>
+          <img style={{marginLeft: '10px'}} src={Logo} alt=""/>
         </Link>
 
         <div className="search">
