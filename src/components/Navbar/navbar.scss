@@ -19,7 +19,7 @@
     .search{
       display: flex;
       align-items: center;
-      margin-left: 270px;
+      margin-left: 250px;
       border: 1px solid #E3E3E3;
       border-radius: 85px;
       padding: 15px;
@@ -33,6 +33,11 @@
         font-size: 16px;
         margin-left: 15px;
         outline: none;
+      }
+
+      img {
+        margin-right: 15px;
+        cursor: pointer;
       }
     }
   }

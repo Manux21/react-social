@@ -3,6 +3,7 @@ import './Rightbar.scss'
 import MenuItem from "../MenuItem/MenuItem";
 import FriendRequests from "../FriendRequests/FriendRequests";
 import Activity from "../Activity/Activity";
+import Online from "../Online/Online";
 
 
 const Rightbar = () => {
@@ -11,6 +12,7 @@ const Rightbar = () => {
       <div className="container">
         <FriendRequests/>
         <Activity/>
+        <Online/>
       </div>
     </div>
   );

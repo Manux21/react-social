@@ -17,8 +17,8 @@ const Navbar = () => {
         </Link>
 
         <div className="search">
-          <img src={searchIcon} alt="searchIcon"/>
           <input type="text" placeholder='Search'/>
+          <img src={searchIcon} alt="searchIcon"/>
         </div>
 
 
