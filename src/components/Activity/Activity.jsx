@@ -13,10 +13,22 @@ const Activity = () => {
 
       <div className="user">
         <img src={AvatarMike} alt="Avatar"/>
-        <span>Han Solo</span>
+        <p>
+          <span>Han Solo</span> have a new post
+        </p>
       </div>
 
-      <span>have a post</span>
+      <div className="user">
+        <img src={AvatarMike} alt="Avatar"/>
+        <p>
+          <span>John Miles</span> changed their avatar
+          picture
+        </p>
+      </div>
+
+
+
+
     </div>
   );
 };
