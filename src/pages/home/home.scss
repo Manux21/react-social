@@ -1,0 +1,12 @@
+@import '../../style.scss';
+
+
+
+
+.home {
+  width: 100%;
+  @include themify($themes) {
+    background-color: themed('bgSoft');
+  }
+
+}

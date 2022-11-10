@@ -1,16 +1,23 @@
+@import '../../style.scss';
+
+
+
+
 .number {
+  @include themify($themes) {
   font-family: 'Inter', sans-serif;
   font-size: 16px;
   width: 58px;
   height: 37px;
   font-weight: bold;
-  color: #443DFF;
-  background-color: #E7E7FF;
+  color: themed('notificationNumber');
+  background-color: themed('notification');
   border-radius: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
+}
 }
 
 .number:hover {

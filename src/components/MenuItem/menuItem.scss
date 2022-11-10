@@ -1,32 +1,43 @@
+@import '../../style.scss';
+
+
+
 .menuitem{
-  display: flex;
-  width: 100%;
-  align-items: center;
-  height: 50px;
-  padding: 15px 10px;
-  border-radius: 10px;
-  gap: 10px;
-  cursor: pointer;
-  font-family: 'Inter', sans-serif;
-  font-size: 16px;
-  font-weight: 600;
-  justify-content: space-between;
-
-  .title {
+  @include themify($themes) {
     display: flex;
+    width: 100%;
     align-items: center;
+    height: 50px;
+    padding: 15px 10px;
+    border-radius: 10px;
     gap: 10px;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    justify-content: space-between;
+
+    .title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: themed(textColor);
+    }
+
+    path {
+      fill: themed(textColor);
+    }
+
+    &:hover {
+      background-color: #443DFF;
+
+      .title {
+        color: themed('itemHover');
+        fill: white;
+      }
+      path {
+        fill: themed('itemHover');
+      }
+    }
   }
-}
-
-.menuitem:hover {
-  background-color: #443DFF;
-  color: white;
-  fill: white;
-
-  path {
-    fill: white;
-  }
-
-
 }

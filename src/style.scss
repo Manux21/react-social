@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+
+$themes:(
+  light:(
+    textColor: black,
+    bg: white,
+    bgSoft:#F7F4F5,
+    logo:#443DFF,
+    textColorSoft: #8F8F8F,
+    border: #E3E3E3,
+    notification: #E7E7FF,
+    notificationNumber: #443DFF,
+    activeColor: #443DFF,
+    itemHover: white,
+  ),
+
+  dark:(
+   textColor: white,
+   bg: #292929,
+   logo: white,
+   bgSoft: #393939,
+   textColorSoft:#8F8F8F,
+   border: black,
+   notification: white,
+   notificationNumber: #443DFF,
+   activeColor: #443DFF,
+   itemHover: white,
+  )
+);
+
+@mixin themify($themes) {
+  @each $theme, $map in $themes {
+    .theme-#{$theme} & {
+      $theme-map: () !global;
+      @each $key, $submap in $map {
+        $value: map-get(map-get($themes, $theme), "#{$key}");
+        $theme-map: map-merge(
+         $theme-map,
+         (
+           $key: $value,
+         )
+        ) !global;
+      }
+      @content;
+      $theme-map: null !global;
+    }
+  }
+}
+
+@function themed($key) {
+  @return map-get($theme-map, $key);
+}
+
+

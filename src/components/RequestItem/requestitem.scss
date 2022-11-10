@@ -1,31 +1,36 @@
+@import '../../style.scss';
+
 .request {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 25px;
-  .user {
+  @include themify($themes) {
     display: flex;
-    align-items: center;
-    gap: 16px;
-    cursor: pointer;
-
-    img {
+    justify-content: space-between;
+    margin-top: 25px;
+    .user {
       display: flex;
-      width: 45px;
-      height: 45px;
-      border-radius: 100px;
+      align-items: center;
+      gap: 16px;
+      cursor: pointer;
+
+      img {
+        display: flex;
+        width: 45px;
+        height: 45px;
+        border-radius: 100px;
+      }
+
+      span {
+        display: flex;
+        font-family: 'Inter', sans-serif;
+        font-weight: 600;
+        font-size: 16px;
+        color: themed('textColor')
+      }
     }
 
-    span {
+    .buttons {
       display: flex;
-      font-family: 'Inter', sans-serif;
-      font-weight: 600;
-      font-size: 16px;
+      align-items: center;
+      gap: 7px;
     }
-  }
-
-  .buttons {
-    display: flex;
-    align-items: center;
-    gap: 7px;
   }
 }

@@ -1,11 +1,15 @@
+@import '../../style.scss';
+
 .friendRequests {
-  background-color: white;
+  @include themify($themes) {
+  background-color: themed('bg');
   display: flex;
   width: 100%;
   box-shadow: 0 4px 24px 3px rgba(0, 0, 0, 0.06);
   border-radius: 10px;
   flex-direction: column;
   padding: 20px 25px;
+
   .header {
     display: flex;
     align-items: center;
@@ -16,7 +20,8 @@
       font-family: 'Inter', sans-serif;
       font-weight: 500;
       font-size: 16px;
-      color: #8F8F8F;
+      color: themed('textColorSoft');
     }
   }
+ }
 }
