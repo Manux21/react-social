@@ -9,10 +9,12 @@ import AvatarMike from '../../img/Avatar.png'
 import Polygon from '../../svg/Polygon.svg'
 import {useContext} from 'react';
 import {DarkModeContext} from "../../context/darkModeContext";
+import {AuthContext} from "../../context/authContext";
 
 const Navbar = () => {
 
   const { toggle } = useContext(DarkModeContext);
+  const {currentUser} = useContext(AuthContext)
 
   return (
     <div className='navbar'>
@@ -39,8 +41,8 @@ const Navbar = () => {
 
         <NotificationNubmer number={3}/>
         <div className="user">
-          <img src={AvatarMike} alt=""/>
-          <span>Mike Parker</span>
+          <img src={currentUser.profilePicture} alt=""/>
+          <span>{currentUser.name}</span>
           <img className='polygon' src={Polygon} alt=""/>
         </div>
       </div>
