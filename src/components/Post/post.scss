@@ -1,5 +1,70 @@
+@import '../../style.scss';
+
+
 .post {
+  @include themify($themes) {
   display: flex;
   flex-direction: column;
   gap: 25px;
+  background-color: themed(bg);
+  box-shadow: 0 4px 24px 3px rgba(0, 0, 0, 0.06);
+  border-radius: 14.1305px;
+  margin: 25px 25px;
+
+
+  .container {
+    padding: 25px;
+
+    .user {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+
+      .userInfo {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+
+        img {
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+
+        .details {
+          display: flex;
+          flex-direction: column;
+
+          .name {
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+            font-size: 16px;
+            color: themed(textColor)
+          }
+
+
+          .date {
+            font-family: 'Inter', sans-serif;
+            font-weight: 300;
+            font-size: 16px;
+            color: gray;
+          }
+        }
+      }
+    }
+
+    .content {
+      margin: 25px 0;
+      color: themed(textColor);
+      img {
+        margin-top: 25px;
+        width: 100%;
+        border-radius: 10px;
+      }
+
+    }
+  }
+}
 }
