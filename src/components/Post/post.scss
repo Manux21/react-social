@@ -11,7 +11,6 @@
   border-radius: 14.1305px;
   margin: 25px 25px;
 
-
   .container {
     padding: 25px;
 
@@ -64,6 +63,13 @@
         border-radius: 10px;
       }
 
+    }
+
+    .info {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 15px;
     }
   }
 }

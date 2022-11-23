@@ -2,6 +2,7 @@ import React from 'react';
 import './post.scss'
 import {Link} from "react-router-dom";
 import AvatarMike from "../../img/Avatar.png";
+import NotificationNubmer from "../NotificationNumber/NotificationNubmer";
 
 const Post = ({post}) => {
   return (
@@ -18,12 +19,14 @@ const Post = ({post}) => {
             </div>
           </div>
         </div>
-
         <div className='content'>
           <p>{post.des}</p>
           <img src={post.img} alt=""/>
         </div>
-        <div className='info'></div>
+        <div className='info'>
+          <NotificationNubmer/>
+          <NotificationNubmer/>
+        </div>
       </div>
     </div>
   );
